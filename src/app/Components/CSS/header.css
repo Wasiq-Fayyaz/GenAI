@@ -1,0 +1,30 @@
+.logo--gradient{
+    background: -webkit-linear-gradient(#92c475,#54ad91);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    
+}
+
+.home--logo{
+    font-size: 13rem;
+    line-height: 123px;
+    height: 150px;
+
+}
+
+.home-button{
+    border: 1px solid #92c475;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+
+.home-button:hover{
+    background-color:#54ad91 ;
+    border: none;
+}
