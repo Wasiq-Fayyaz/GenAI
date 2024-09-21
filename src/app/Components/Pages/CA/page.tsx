@@ -1,3 +1,4 @@
+"use client";
 import bg from '../../../Images/CA_bg.jpg'
 import { Bounce, Fade, Hinge,Slide,Zoom } from 'react-awesome-reveal'
 import globe from '../../../Images/globe.png'
