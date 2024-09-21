@@ -68,7 +68,7 @@ export default function Tokenomics() {
     },
     {
       id: 4,
-      title: "Security & Transparency",
+      title: "Secure & Transparent",
       description:
         "GenAI ensures regular audits and clear communication with our community",
     },
@@ -101,7 +101,7 @@ export default function Tokenomics() {
       </svg> */}
 
           <AnimatedNumber
-            className="inline-flex items-center font-mono text-8xl mt-24 font-semibold text-zinc-800 dark:text-zinc-50 logo--gradient"
+            className="inline-flex items-center font-mono text-6xl md:text-8xl mt-24 font-semibold text-zinc-800 dark:text-zinc-50 logo--gradient"
             springOptions={{
               bounce: 0,
               duration: 1000,
@@ -110,7 +110,7 @@ export default function Tokenomics() {
           />
           <div className="flex items-center gap-2 mt-6">
             <RiSparkling2Fill className="text-white text-xl" />
-            <p className="text-zinc-200 font-medium text-2xl">
+            <p className="text-zinc-200 font-medium text-xl sm:text-2xl">
               10 Million <span className="logo--gradient font-bold">GenAI</span>{" "}
               Tokens
             </p>
@@ -121,40 +121,41 @@ export default function Tokenomics() {
 
         {/*---------------------Tax Distribution + chart*--------------------- */}
 
-        <div className="flex items-center">
-        <div className="flex flex-col justify-center gap-4 mt-2 p-10 ">
+        <div className="flex flex-col 2xl:flex-row items-center">
+          <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col 2xl:flex-row justify-center gap-4 p-5">
 
             {/*Tax Distribution # 1* */}
-          <div className="flex items-center gap-4">
-          <div className="flex flex-col items-center gap-2 rounded-xl w-60 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
-            <h3 className="flex items-center gap-2 text-9xl font-semibold logo--gradient">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+          <div className="flex flex-col items-center gap-2 rounded-xl w-72 md:w-52 h-40 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
+            <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-9xl font-semibold logo--gradient">
               2%
             </h3>
-            <p className="text-white text-sm">Teams & Advisors</p>
+            <p className="text-white text-lg md:text-xs">Teams & Advisors</p>
           </div>
 
-          <div className="flex flex-col items-center gap-2 rounded-xl w-60 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
-            <h3 className="flex items-center gap-2 text-9xl font-semibold logo--gradient">
+          <div className="flex flex-col items-center gap-2 rounded-xl w-72 md:w-52 h-40 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
+            <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-9xl font-semibold logo--gradient">
               5%
             </h3>
-            <p className="text-white text-sm">Marketing & Partnerships</p>
+            <p className="text-white text-lg md:text-xs">Marketing & Partnerships</p>
           </div>
           </div>
 
 {/*Tax Distribution # 1* */}
-            <div className="flex items-center gap-4">
-          <div className="flex flex-col items-center gap-2 rounded-xl  w-60 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
-            <h3 className="flex items-center gap-2 text-9xl font-semibold logo--gradient">
+            <div className="flex flex-col md:flex-row items-center gap-4">
+          <div className="flex flex-col items-center gap-2 rounded-xl  w-72 md:w-52 h-36 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
+            <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-9xl font-semibold logo--gradient">
               2%
             </h3>
-            <p className="text-white text-sm">Development & Operations</p>
+            <p className="text-white text-lg md:text-xs">Development & Operations</p>
           </div>
 
-          <div className="flex flex-col items-center gap-2 rounded-xl transition ease-in-out duration-150 hover:bg-neutral-800 p-5 w-60 cursor-pointer bg-neutral-900">
-            <h3 className="flex items-center gap-2 text-9xl font-semibold logo--gradient">
+          <div className="flex flex-col items-center justify-center gap-2 rounded-xl transition ease-in-out duration-150 hover:bg-neutral-800 p-5 w-72 md:w-52 h-36 lg:h-48 cursor-pointer bg-neutral-900">
+            <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-9xl  font-semibold logo--gradient">
               1%
             </h3>
-            <p className="text-white text-sm">Community & Rewards</p>
+            <p className="text-white text-lg md:text-xs">Community & Rewards</p>
           </div>
           </div>
           
@@ -162,7 +163,7 @@ export default function Tokenomics() {
 
 
         {/*-----------------------CHART DIV-----------------------* */}
-        <div className="transition ease-in-out duration-150 p-10 cursor-pointer bg-neutral-900 rounded-xl hover:bg-neutral-800 ">
+        <div className="transition ease-in-out duration-150 w-72 md:w-4/5 h-64 md:h-80 lg:h-96  cursor-pointer bg-neutral-900 rounded-xl hover:bg-neutral-800 ">
         <VictoryPie
          style={{
           labels: {
@@ -184,28 +185,45 @@ export default function Tokenomics() {
   ]}
 />
         </div>
+        </div>
 
+        
         <div>
 
         </div>
 
+        <div className='grid grid-cols-1 gap-4 mt-6 md:grid-cols-2 lg:grid-cols-4' >
+      
+      {ITEMS.map((item, index) => (
+        <div key={index} className="flex w-full cursor-pointer"> 
+          <div className="flex flex-col gap-2 transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl p-5 w-72 h-36 md:h-44 xl:w-72">
+            <h3 className="flex gap-2 items-center logo--gradient font-bold text-base xl:text-lg">
+              <RiSparkling2Fill  className="text-white"/>
+              {item.title}
+            </h3>
+            <p className="text-white text-sm md:text-base">{item.description}</p>
+          </div>
+        </div>
+      ))}
+    
+  </div>
         </div>
 
-        <div className='grid grid-cols-2 gap-4 ps-10 md:grid-cols-4'>
+        {/* <div className='grid grid-cols-1 gap-4 ps-6 lg:ps-10 mt-6 md:grid-cols-4'>
       
         {ITEMS.map((item, index) => (
           <div key={index} className="flex w-full cursor-pointer"> 
-            <div className="transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl p-5 w-80 h-36">
-              <h3 className="flex gap-2 items-center logo--gradient font-bold text-lg">
+            <div className="flex flex-col gap-2 transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl p-5 w-72 h-36">
+              <h3 className="flex gap-2 items-center logo--gradient font-bold text-base lg:text-lg">
                 <RiSparkling2Fill  className="text-white"/>
                 {item.title}
               </h3>
-              <p className="text-white text-base ">{item.description}</p>
+              <p className="text-white text-sm md:text-base">{item.description}</p>
             </div>
           </div>
         ))}
       
-    </div>
+    </div> */}
 
       </div>
     </section>

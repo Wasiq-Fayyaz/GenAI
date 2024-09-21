@@ -25,7 +25,7 @@ export default function Features() {
     },
     {
       id: 2,
-      title: 'Customizable Designs',
+      title: 'Editable Designs',
       description: 'Personalize your posts with flexible design options, including layouts, fonts, colors, and images.',
     },
     {
@@ -57,9 +57,9 @@ export default function Features() {
           GenAI Utility
         </h2>
         <div className="mt-8">
-          <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold text-white tracking-tight md:mt-2 lg:mt-2 text-center">
-            ~ <span className="logo--gradient">Empowering</span> Your{" "}
-            <span className="logo--gradient ">Crypto</span> Journey ~
+          <h3 className="text-lg md:text-2xl lg:text-3xl font-normal text-white tracking-tight md:mt-2 lg:mt-2 text-center">
+            <span className="logo--gradient">Empowering</span> Your{" "}
+            <span className="logo--gradient ">Crypto</span> Journey
           </h3>
         </div>
       </Fade>
@@ -68,17 +68,17 @@ export default function Features() {
         crypto community. Here's what makes GenAI indispensable:
       </p>
 
-      <div className='grid gap-6 grid-cols-2 p-10 md:grid-cols-3'>
+      <div className='grid gap-6 grid-cols-1 mt-10 md:grid-cols-3'>
      
         {ITEMS.map((item, index) => (
           <div key={index} data-id={`card-${index}`}>
             <Slide cascade>
-            <div className='flex select-none flex-col space-y-1 p-4 rounded-xl transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 w-90 h-40 cursor-pointer'>
-              <h3 className='flex items-center gap-2 text-base font-bold text-xl logo--gradient dark:text-zinc-50'>
+            <div className='flex select-none gap-2 flex-col space-y-1 p-4 rounded-xl transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 w-90 md:h-64 lg:h-48 cursor-pointer'>
+              <h3 className='flex items-center gap-2 md:text-base lg:text-base xl:text-2xl font-medium logo--gradient dark:text-zinc-50'>
                 <RiSparkling2Fill/>
                 {item.title}
               </h3>
-              <p className='text-base text-white'>
+              <p className='text-sm leading-7 md:text-base text-white'>
                 {item.description}
               </p>
             </div>

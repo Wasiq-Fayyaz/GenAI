@@ -201,7 +201,7 @@ export default function Header() {
 
       <section
         id="home"
-        className="relative flex flex-col justify-center p-5 lg:p-7 w-full mt-12"
+        className="relative flex flex-col justify-center p-2 lg:p-7 w-full mt-12"
       >
        
         <div className="flex flex-col items-center justify-center gap-3">
@@ -212,22 +212,22 @@ export default function Header() {
               GenAI
               
             </span>
-            <div className="flex items-center gap-3 ms-4">
-            <RiSparkling2Fill className="text-white text-3xl"/> 
+            <div className="flex items-center gap-3 lg:gap-3">
+            <RiSparkling2Fill className="text-white text-xl md:text-3xl lg:text-4xl"/> 
             
-            <p className="text-white text-2xl font-regular tracking-normal">
+            <p className="text-white text-md sm:text-xl xl:text-2xl font-base tracking-normal">
               <TextEffect per='char' preset='fade'>
               The Future of Crypto Marketing
               </TextEffect>
               </p>
               
-              <RiSparkling2Fill className="text-white text-3xl"/> 
+              <RiSparkling2Fill className="text-white text-xl md:text-3xl rotate-180"/> 
             </div>
             
             </div>
 
             <div className="flex gap-5 mt-3">
-              <button className="home-button">
+              <button className="home-button ">
                 Join Now
               </button>
               <button className="home-button">
