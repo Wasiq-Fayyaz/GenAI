@@ -102,7 +102,7 @@ export default function Discover() {
     <div className="flex justify-center mt-8 w-90">
       <fieldset className="flex text-center p-5 border-2 rounded-xl border-green-200 2xl:w-1/2">
         <legend className="logo--gradient text-3xl lg:text-4xl font-bold"> Our Commitment </legend>
-        <i className="text-white text-lg xl:text-xl text-center lg:p-5">" We are committed to continuous improvement, transparency, and building a platform that meets the evolving needs of our users. Join us on our journey to revolutionize crypto marketing "</i>
+        <i className="text-white text-lg xl:text-xl text-center lg:p-5">&quot; We are committed to continuous improvement, transparency, and building a platform that meets the evolving needs of our users. Join us on our journey to revolutionize crypto marketing &quot;</i>
       </fieldset>
   
     </div>
