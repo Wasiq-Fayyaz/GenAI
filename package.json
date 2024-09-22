@@ -59,6 +59,7 @@
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
     "react-type-animation": "^3.1.0",
+    "react-use-measure": "^2.1.1",
     "recharts": "^2.12.7",
     "rellax": "^1.12.1",
     "swiper": "^11.1.4",
