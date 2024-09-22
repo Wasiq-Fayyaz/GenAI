@@ -23,7 +23,6 @@ import { Fade, Slide } from "react-awesome-reveal";
 import CA from "./Pages/CA/page";
 
 import "../Components/CSS/header.css";
-import { TextEffect } from "./Effects/textEffect";
 import logo from "../Images/logo.png";
 
 export default function Header() {
