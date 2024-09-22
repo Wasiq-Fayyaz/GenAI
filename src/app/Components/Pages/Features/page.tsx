@@ -16,32 +16,36 @@ import AnimatedBackground from "../../Effects/animatedBackground";
 import { RiSparkling2Fill } from "react-icons/ri";
 
 export default function Features() {
-
   const ITEMS = [
     {
       id: 1,
-      title: 'AI-Driven Shill Post',
-      description: 'Generate high-quality, market-ready posts instantly, tailored to your project needs.',
+      title: "AI-Driven Shill Post",
+      description:
+        "Generate high-quality, market-ready posts instantly, tailored to your project needs.",
     },
     {
       id: 2,
-      title: 'Editable Designs',
-      description: 'Personalize your posts with flexible design options, including layouts, fonts, colors, and images.',
+      title: "Editable Designs",
+      description:
+        "Personalize your posts with flexible design options, including layouts, fonts, colors, and images.",
     },
     {
       id: 3,
-      title: 'Real-Time Content Creation',
-      description: 'Stay ahead of the curve with instant post generation, allowing you to capitalize on market trends without delay.',
+      title: "Real-Time Content Creation",
+      description:
+        "Stay ahead of the curve with instant post generation, allowing you to capitalize on market trends without delay.",
     },
     {
       id: 4,
-      title: 'User-Friendly Interface',
-      description: 'Whether you are a crypto novice or an experienced marketer, GEenAI intuitive interface ensures you can create compelling content with ease.',
+      title: "User-Friendly Interface",
+      description:
+        "Whether you are a crypto novice or an experienced marketer, GEenAI intuitive interface ensures you can create compelling content with ease.",
     },
     {
       id: 5,
-      title: 'Auto-Shilling',
-      description: 'Automatically share your shill posts with targeted groups, ensuring your message reaches the right audien ce at the right time with minimal effort.',
+      title: "Auto-Shilling",
+      description:
+        "Automatically share your shill posts with targeted groups, ensuring your message reaches the right audien ce at the right time with minimal effort.",
     },
     // {
     //   id: 6,
@@ -53,7 +57,7 @@ export default function Features() {
   return (
     <section className="flex flex-col items-center mt-12 md:mt-16">
       <Fade>
-        <h2 className="text-5xl font-bold tracking-normal text-center md:text-5xl text-white">
+        <h2 className="text-5xl font-bold tracking-normal text-center md:text-5xl logo--gradient">
           GenAI Utility
         </h2>
         <div className="mt-8">
@@ -68,25 +72,25 @@ export default function Features() {
         crypto community. Here's what makes GenAI indispensable:
       </p>
 
-      <div className='grid gap-6 grid-cols-1 mt-10 md:grid-cols-3'>
-     
+      <div className="grid gap-6 grid-cols-1 mt-10 md:grid-cols-3">
         {ITEMS.map((item, index) => (
           <div key={index} data-id={`card-${index}`}>
             <Slide cascade>
-            <div className='flex select-none gap-2 flex-col space-y-1 p-4 rounded-xl transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 w-90 md:h-64 lg:h-48 cursor-pointer'>
-              <h3 className='flex items-center gap-2 md:text-base lg:text-base xl:text-2xl font-medium logo--gradient dark:text-zinc-50'>
-                <RiSparkling2Fill/>
-                {item.title}
-              </h3>
-              <p className='text-sm leading-7 md:text-base text-white'>
-                {item.description}
-              </p>
-            </div>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <div className="flex select-none gap-2 flex-col space-y-1 p-4 rounded-xl transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 w-90 md:h-64 lg:h-48 cursor-pointer">
+                  <h3 className="flex items-center gap-2 md:text-base lg:text-base xl:text-2xl font-medium logo--gradient dark:text-zinc-50">
+                    <RiSparkling2Fill />
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-7 md:text-base text-white">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
             </Slide>
           </div>
         ))}
- 
-    </div>
+      </div>
     </section>
   );
 }

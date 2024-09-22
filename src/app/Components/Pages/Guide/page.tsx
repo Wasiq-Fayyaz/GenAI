@@ -93,6 +93,7 @@ export default function Guide() {
         <div className="flex flex-col gap-10 ">
           <Fade cascade>
             {/**Phases Content 1 */}
+            <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
             <div className="transition ease-in-out delay-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl cursor-pointer">
               <ol className="text-white p-5 text-xs leading-5 lg:text-base">
                 <li className="flex gap-2 items-center">
@@ -113,8 +114,10 @@ export default function Guide() {
                 </li>
               </ol>
             </div>
+            </motion.div>
 
             {/**Phases Content 2 */}
+            <motion.div whileHover={{scale:1.1}} whileDrag={{scale:0.9}}>
             <div className="transition ease-in-out delay-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl cursor-pointer ">
               <ol className="text-white p-5 text-xs leading-5 lg:text-base">
                 <li className="flex gap-2 items-center">
@@ -135,8 +138,10 @@ export default function Guide() {
                 </li>
               </ol>
             </div>
+            </motion.div>
 
             {/**Phases Content 3 */}
+            <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
             <div className="transition ease-in-out delay-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl cursor-pointer">
               <ol className="text-white p-5 text-xs leading-5 lg:text-base">
                 <li className="flex gap-2 items-center">
@@ -157,8 +162,10 @@ export default function Guide() {
                 </li>
               </ol>
             </div>
+            </motion.div>
 
             {/**Phases Content 4 */}
+            <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
             <div className="transition ease-in-out delay-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl cursor-pointer">
               <ol className="text-white p-5 text-xs leading-5 lg:text-base">
                 <li className="flex gap-2 items-center">
@@ -179,15 +186,19 @@ export default function Guide() {
                 </li>
               </ol>
             </div>
+            </motion.div>
+
+
           </Fade>
         </div>
       </div>
 
-      <div className="md:hidden mt-10">
+      <div className="md:hidden flex justify-center mt-10">
         <div className="flex flex-col items-center">
           {/*Content 1*/}
+          <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}} className="ms-6">
           <div className="flex flex-col bg-neutral-900 rounded-xl p-2 w-11/12 border-t-2 border-b-2 border-green-400 hover:bg-neutral-800 shadow-sm shadow-green-400/70">
-            <h3 className="logo--gradient text-2xl font-bold tracking-tight ms-2">
+            <h3 className="logo--gradient text-xl font-bold tracking-tight ms-2">
               Concept & Development
             </h3>
             <ol className="flex flex-col gap-2 text-white mt-4 ms-2 text-sm">
@@ -209,10 +220,12 @@ export default function Guide() {
                 </li>
               </ol>
           </div>
+          </motion.div>
 
  {/**Seperator */}
  <div className="w-2 h-20 seperator rounded-full"></div>
     {/*Content 2*/}
+          <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}} className="ms-6"> 
           <div className="flex flex-col bg-neutral-900 rounded-xl p-2 w-11/12 border-t-2 border-b-2 border-green-400 hover:bg-neutral-800 shadow-sm shadow-green-400/70">
             <h3 className="logo--gradient text-2xl font-bold tracking-tight ms-2">
             Launch & Expansion
@@ -236,10 +249,12 @@ export default function Guide() {
                 </li>
               </ol>
           </div>
+          </motion.div>
 
  {/**Seperator */}
  <div className="w-2 h-20 seperator rounded-full"></div>
     {/*Content 3*/}
+    <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}} className="ms-6">
  <div className="flex flex-col bg-neutral-900 rounded-xl p-2 w-11/12 border-t-2 border-b-2 border-green-400 hover:bg-neutral-800 shadow-sm shadow-green-400/70">
             <h3 className="logo--gradient text-2xl font-bold tracking-tight ms-2">
             Feature Enhancement
@@ -263,10 +278,11 @@ export default function Guide() {
                 </li>
               </ol>
           </div>
-
+          </motion.div>
  {/**Seperator */}
  <div className="w-2 h-20 seperator rounded-full"></div>
     {/*Content 4*/}
+    <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}} className="ms-6">
  <div className="flex flex-col bg-neutral-900 rounded-xl p-2 w-11/12 border-t-2 border-b-2 border-green-400 hover:bg-neutral-800 shadow-sm shadow-green-400/70">
             <h3 className="logo--gradient text-2xl font-bold tracking-tight ms-2">
             Community & Growth
@@ -290,7 +306,7 @@ export default function Guide() {
                 </li>
               </ol>
           </div>
-
+          </motion.div>
         </div>
       </div>
     </section>

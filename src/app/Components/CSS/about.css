@@ -40,3 +40,24 @@
       padding: 0.25em 0.75em;
     }
   }
+
+  .slider{
+    width: 350px;
+  }
+
+  @media (min-width:768px) {
+    .slider{
+      width: 730px;
+    } 
+  }
+
+  @media (min-width:1024px) {
+    .slider{
+      width: 950px;
+    } 
+  }
+  @media (min-width:1280px) {
+    .slider{
+      width: 1250px;
+    } 
+  }

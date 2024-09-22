@@ -96,6 +96,7 @@
     width:100%;
     max-width:100%;
     min-width:100%;
+    
   }
 
 
@@ -110,6 +111,7 @@
   filter: contrast(1.1) brightness(30%);
   background-size: cover;
   z-index: -1;
+  background: url('../app/Images/bg_ai_5.jpg') no-repeat center center;
 }
 
 .Ca--bg{
@@ -219,7 +221,7 @@ ul li:hover::before {
   height: 100vh; 
   text-decoration: none;
   z-index: 9999;
-  background-color: rgba(2, 132, 199,0.2); 
+  background-color: rgba(146, 196, 117,0.2); 
   backdrop-filter: blur(10px);
 }
 

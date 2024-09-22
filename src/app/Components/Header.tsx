@@ -19,29 +19,28 @@ import "react-toastify/dist/ReactToastify.css";
 import { RiSparkling2Fill } from "react-icons/ri";
 
 import Image from "next/image";
-import { Fade,Slide } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 import CA from "./Pages/CA/page";
-import { FaEthereum, } from "react-icons/fa";
-import { SiBitcoinsv } from "react-icons/si";
-import logo from "../Images/gen_ai_logo.png"
-import '../Components/CSS/header.css'
-import { TextEffect } from "./Effects/textEffect";
 
+import "../Components/CSS/header.css";
+import { TextEffect } from "./Effects/textEffect";
+import logo from "../Images/logo.png";
 
 export default function Header() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
   let [isMenuOpen, setisMenuOpen] = useState(false);
-  const notify = () => toast.info('Coming Soon!', {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
-    transition: Bounce,
-    });;
+  const notify = () =>
+    toast.info("Coming Soon!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
 
   function ToggleNav() {
     setisMenuOpen(!isMenuOpen);
@@ -108,7 +107,7 @@ export default function Header() {
                 className="leading-7 text-base font-regular tracking-wider"
                 onClick={ToggleNav}
               >
-                Roadmap
+                Tokenomics
               </p>
             </AnchorLink>
           </li>
@@ -119,12 +118,21 @@ export default function Header() {
                 className="leading-7 text-base font-regular tracking-wider"
                 onClick={ToggleNav}
               >
-                Tokenomics
+                Roadmap
               </p>
             </AnchorLink>
           </li>
-
-{/*       
+          <li>
+            <AnchorLink href="#community">
+              <p
+                className="leading-7 text-base font-regular tracking-wider"
+                onClick={ToggleNav}
+              >
+                Community
+              </p>
+            </AnchorLink>
+          </li>
+          {/*       
           <li>
             <AnchorLink href="">
               <p className="leading-7 text-base font-regular tracking-wider text-white">
@@ -174,7 +182,7 @@ export default function Header() {
           <li>
             <AnchorLink href="#tokenomics">
               <p className="leading-7 text-lg font-normal tracking-wide">
-                Roadmap
+                Tokenomics
               </p>
             </AnchorLink>
           </li>
@@ -182,7 +190,18 @@ export default function Header() {
           <li>
             <AnchorLink href="#guide">
               <p className="leading-7 text-lg font-normal tracking-wide">
-                Tokenomics
+                Roadmap
+              </p>
+            </AnchorLink>
+          </li>
+
+          <li>
+            <AnchorLink href="#community">
+              <p
+                className="leading-7 text-lg font-regular tracking-wider"
+                onClick={ToggleNav}
+              >
+                Community
               </p>
             </AnchorLink>
           </li>
@@ -203,36 +222,49 @@ export default function Header() {
         id="home"
         className="relative flex flex-col justify-center p-2 lg:p-7 w-full mt-12"
       >
-       
         <div className="flex flex-col items-center justify-center gap-3">
           <Fade cascade className="flex justify-center w-full">
             <div className="flex flex-col justify-center items-center w-full gap-3">
-            
-            <span className="logo--gradient font-bold tracking-normal text-center bg-white home--logo">
-              GenAI
-              
-            </span>
-            <div className="flex items-center gap-3 lg:gap-3">
-            <RiSparkling2Fill className="text-white text-xl md:text-3xl lg:text-4xl"/> 
-            
-            <p className="text-white text-md sm:text-xl xl:text-2xl font-base tracking-normal">
-              <TextEffect per='char' preset='fade'>
-              The Future of Crypto Marketing
-              </TextEffect>
-              </p>
-              
-              <RiSparkling2Fill className="text-white text-xl md:text-3xl rotate-180"/> 
-            </div>
-            
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center ms-6 sm:ms-10 md:ms-12 lg:ms-14">
+                  <Image src={logo} alt="404" className="w-1/4"></Image>
+                  <span className="flex logo--gradient font-bold tracking-normal text-center bg-white home--logo text-6xl sm:text-6xl md:text-8xl lg:text-9xl">
+                    {" "}
+                    GenAI
+                  </span>
+                </div>
+              </motion.div>
+              <div className="flex items-center gap-3 lg:gap-3">
+                <RiSparkling2Fill className="text-white text-xl md:text-3xl lg:text-4xl" />
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                  >
+                  <p className="text-white text-md sm:text-xl xl:text-2xl font-base tracking-normal">
+                    The Future of Crypto Marketing
+                  </p>
+                  </motion.div>
+                <RiSparkling2Fill className="text-white text-xl md:text-3xl rotate-180" />
+              </div>
             </div>
 
             <div className="flex gap-5 mt-3">
-              <button className="home-button ">
-                Join Now
-              </button>
-              <button className="home-button">
-                Buy Now
-              </button>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <button className="home-button ">Join Now</button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <button className="home-button">Buy Now</button>
+              </motion.div>
             </div>
 
             {/* <div className="flex justify-center">
@@ -244,7 +276,6 @@ export default function Header() {
                 transforming the way you work and succeed.
               </p>
             </div> */}
-                      
           </Fade>
         </div>
       </section>
@@ -277,9 +308,9 @@ export default function Header() {
         <Dapp />
       </section> */}
 
-      {/* <section id="community" className="p-5">
+      <section id="community" className="p-5">
         <Community />
-      </section> */}
+      </section>
     </header>
   );
 }

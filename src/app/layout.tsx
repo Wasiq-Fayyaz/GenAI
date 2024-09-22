@@ -32,10 +32,12 @@ export default function RootLayout({
     <html lang="en">
       
       <body className={poppins.className}>
+        <div>
         <Header/>
         {children}
         <ToastContainer />
         <Footer/>
+        </div>
       </body>
     </html>
   )

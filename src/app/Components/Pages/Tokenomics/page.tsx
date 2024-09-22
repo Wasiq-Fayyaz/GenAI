@@ -18,8 +18,8 @@ import AnimatedBackground from "../../Effects/animatedBackground";
 import { Percent, TrendingUp } from "lucide-react";
 import { Label, Pie, PieChart } from "recharts";
 import "../../CSS/tokenomics.css";
-import { LineSegment, VictoryPie } from 'victory'
-
+import { LineSegment, VictoryPie } from "victory";
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -45,7 +45,6 @@ export default function Tokenomics() {
   if (isInView && value === 0) {
     setValue(10000000);
   }
-
 
   const ITEMS = [
     {
@@ -74,7 +73,6 @@ export default function Tokenomics() {
     },
   ];
 
-  
   return (
     <section className="flex flex-col items-center mt-24 w-full">
       <Fade>
@@ -82,8 +80,6 @@ export default function Tokenomics() {
           Tokenomics
         </h2>
       </Fade>
-
-      
 
       <div className="flex flex-col w-full">
         <div
@@ -118,95 +114,151 @@ export default function Tokenomics() {
           </div>
         </div>
 
-
         {/*---------------------Tax Distribution + chart*--------------------- */}
 
         <div className="flex flex-col 2xl:flex-row items-center">
           <div className="flex flex-col lg:flex-row items-center">
-        <div className="flex flex-col 2xl:flex-row justify-center gap-4 p-5">
+            <div className="flex flex-col 2xl:flex-row justify-center gap-4 p-5">
+              {/*Tax Distribution # 1* */}
+              <div className="flex flex-col md:flex-row items-center gap-4">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileDrag={{ scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex flex-col items-center justify-center gap-2 rounded-xl w-72 md:w-52 h-40 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
+                    <h3 className="flex items-center text-8xl md:text-7xl lg:text-8xl font-semibold logo--gradient">
+                      2%
+                    </h3>
+                    <p className="text-white text-lg md:text-xs">
+                      Teams & Advisors
+                    </p>
+                  </div>
+                </motion.div>
 
-            {/*Tax Distribution # 1* */}
-          <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="flex flex-col items-center gap-2 rounded-xl w-72 md:w-52 h-40 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
-            <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-9xl font-semibold logo--gradient">
-              2%
-            </h3>
-            <p className="text-white text-lg md:text-xs">Teams & Advisors</p>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileDrag={{ scale: 0.9 }}
+                >
+                  <div className="flex flex-col items-center justify-center gap-2 rounded-xl w-72 md:w-52 h-40 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
+                    <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-8xl font-semibold logo--gradient">
+                      5%
+                    </h3>
+                    <p className="text-white text-lg md:text-xs">
+                      Marketing & Partnerships
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/*Tax Distribution # 1* */}
+              <div className="flex flex-col md:flex-row items-center gap-4">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex flex-col items-center justify-center gap-2 rounded-xl  w-72 md:w-52 h-36 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
+                    <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-8xl font-semibold logo--gradient">
+                      2%
+                    </h3>
+                    <p className="text-white text-lg md:text-xs">
+                      Development & Operations
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <div className="flex flex-col items-center justify-center gap-2 rounded-xl transition ease-in-out duration-150 hover:bg-neutral-800 p-5 w-72 md:w-52 h-36 lg:h-48 cursor-pointer bg-neutral-900">
+                    <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-8xl  font-semibold logo--gradient">
+                      1%
+                    </h3>
+                    <p className="text-white text-lg md:text-xs">
+                      Community & Rewards
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
+            {/*-----------------------CHART DIV-----------------------* */}
+            <div className="transition ease-in-out duration-150 w-72 md:w-4/5 h-64 md:h-80 lg:h-96  cursor-pointer bg-neutral-900 rounded-xl hover:bg-neutral-800 ">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
+                <VictoryPie
+                  style={{
+                    labels: {
+                      fontSize: 15,
+                      fill: "#FFFFFF",
+                    },
+                  }}
+                  colorScale={["#57CC99", "#80ED99", "#57CC99", "#57CC99"]}
+                  padAngle={({ datum }) => datum.y}
+                  innerRadius={100}
+                  width={700}
+                  // labelIndicator
+                  labelIndicator={
+                    <LineSegment
+                      style={{
+                        stroke: "#FFFFFF",
+                        strokearray: 3,
+                        fill: "none",
+                      }}
+                    />
+                  }
+                  data={[
+                    { x: "Team & Advisors", y: 2 },
+                    { x: "Marketing & Partnerships", y: 5 },
+                    { x: "Development & Operations", y: 2 },
+                    { x: "Community & Rewards", y: 1 },
+                  ]}
+                />
+              </motion.div>
+            </div>
           </div>
 
-          <div className="flex flex-col items-center gap-2 rounded-xl w-72 md:w-52 h-40 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
-            <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-9xl font-semibold logo--gradient">
-              5%
-            </h3>
-            <p className="text-white text-lg md:text-xs">Marketing & Partnerships</p>
+          <div></div>
+
+          <div className="grid grid-cols-1 gap-4 mt-6 md:grid-cols-2 lg:grid-cols-4">
+            {ITEMS.map((item, index) => (
+              <div key={index} className="flex w-full cursor-pointer">
+                <motion.div
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex flex-col gap-2 transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl p-5 w-72 h-36 md:h-44 lg:w-60 xl:w-72 ">
+                    <h3 className="flex gap-2 items-center logo--gradient font-bold text-base xl:text-lg lg:text-sm">
+                      <RiSparkling2Fill className="text-white" />
+                      {item.title}
+                    </h3>
+                    <p className="text-white text-sm md:text-base">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            ))}
           </div>
-          </div>
-
-{/*Tax Distribution # 1* */}
-            <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="flex flex-col items-center gap-2 rounded-xl  w-72 md:w-52 h-36 lg:h-48 transition ease-in-out duration-150 hover:bg-neutral-800 p-5 cursor-pointer bg-neutral-900">
-            <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-9xl font-semibold logo--gradient">
-              2%
-            </h3>
-            <p className="text-white text-lg md:text-xs">Development & Operations</p>
-          </div>
-
-          <div className="flex flex-col items-center justify-center gap-2 rounded-xl transition ease-in-out duration-150 hover:bg-neutral-800 p-5 w-72 md:w-52 h-36 lg:h-48 cursor-pointer bg-neutral-900">
-            <h3 className="flex items-center gap-2 text-8xl md:text-7xl lg:text-9xl  font-semibold logo--gradient">
-              1%
-            </h3>
-            <p className="text-white text-lg md:text-xs">Community & Rewards</p>
-          </div>
-          </div>
-          
-        </div>
-
-
-        {/*-----------------------CHART DIV-----------------------* */}
-        <div className="transition ease-in-out duration-150 w-72 md:w-4/5 h-64 md:h-80 lg:h-96  cursor-pointer bg-neutral-900 rounded-xl hover:bg-neutral-800 ">
-        <VictoryPie
-         style={{
-          labels: {
-            fontSize: 15, fill: "#FFFFFF",
-          }
-         }}
-         colorScale={["#57CC99","#80ED99","#57CC99","#57CC99",]}
-        padAngle={({ datum }) => datum.y}
-        innerRadius={100}
-        width={700}
-        // labelIndicator
-        labelIndicator={<LineSegment style = {{stroke:"#FFFFFF", strokearray:3,fill: "none",}}/>}
-        
-  data={[
-    { x: "Team & Advisors", y: 2 },
-    { x: "Marketing & Partnerships", y: 5 },
-    { x: "Development & Operations", y: 2 },
-    { x: "Community & Rewards", y: 1 },
-  ]}
-/>
-        </div>
-        </div>
-
-        
-        <div>
-
-        </div>
-
-        <div className='grid grid-cols-1 gap-4 mt-6 md:grid-cols-2 lg:grid-cols-4' >
-      
-      {ITEMS.map((item, index) => (
-        <div key={index} className="flex w-full cursor-pointer"> 
-          <div className="flex flex-col gap-2 transition ease-in-out duration-150 bg-neutral-900 hover:bg-neutral-800 rounded-xl p-5 w-72 h-36 md:h-44 xl:w-72">
-            <h3 className="flex gap-2 items-center logo--gradient font-bold text-base xl:text-lg">
-              <RiSparkling2Fill  className="text-white"/>
-              {item.title}
-            </h3>
-            <p className="text-white text-sm md:text-base">{item.description}</p>
-          </div>
-        </div>
-      ))}
-    
-  </div>
         </div>
 
         {/* <div className='grid grid-cols-1 gap-4 ps-6 lg:ps-10 mt-6 md:grid-cols-4'>
@@ -224,7 +276,6 @@ export default function Tokenomics() {
         ))}
       
     </div> */}
-
       </div>
     </section>
   );
