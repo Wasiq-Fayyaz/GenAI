@@ -1,0 +1,22 @@
+.logo--gradient{
+    background: -webkit-linear-gradient(#92c475,#54ad91);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.about-button{
+    border: 2px solid #92c475;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease-in-out, border 0.2s ease-in-out;
+}
+
+.about-button:hover{
+    background-color:#54ad91 ;
+    color: white;
+    border: none;
+}

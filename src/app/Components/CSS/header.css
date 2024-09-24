@@ -1,0 +1,51 @@
+.logo--gradient{
+    background: -webkit-linear-gradient(#92c475,#54ad91);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;;
+    line-height: 100%;
+    
+}
+
+.home--logo{
+    /* font-size: 7rem; */
+    line-height: 100%;
+
+}
+
+
+
+.home-button{
+    border: 1px solid #92c475;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+    width: 120px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+
+.home-button:hover{
+    background-color:#54ad91 ;
+    border: none;
+}
+
+
+@media (min-width:768px) {
+    .home-button{
+        width: 150px;
+    }
+    .home--logo{
+        font-size: 12rem;
+        line-height: 100%;
+        
+        
+    }
+}
+
+@media (min-width:1024px) {
+    .home--logo{
+        font-size: 14rem;
+        line-height: 100%;
+    }
+}
